@@ -16,8 +16,8 @@ app.use(express.json())
 
 app.use('/api/v1/tasks/', router)
 
-app.use(notFound)
 app.use(errorHandlerMiddleware)
+app.use(notFound)
 
 async function start() {
   try {
